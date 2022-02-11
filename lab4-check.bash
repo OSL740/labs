@@ -5,7 +5,7 @@
 # Author:  Murray Saul
 # Date:    June 7, 2016
 # Edited by: Peter Callaghan
-# Date: Sept 26, 2021
+# Date: 11 Feb, 2022
 #
 # Purpose: Check that students correctly managed user and group accounts
 #          when performing this lab, check that students have properly
@@ -70,26 +70,26 @@ clear
 
 
 # Start checking lab4
-echo "OPS245 Lab 4 Check Script" > $logfile
+echo "OSL740 Lab 4 Check Script" > $logfile
 echo | tee -a $logfile
 echo "CHECKING YOUR LAB 4 WORK:" | tee -a $logfile
 echo | tee -a $logfile
 
-# Check ops245_2 user created (centos1)
-echo "Checking that ops245_2 user created (centos1): " | tee -a $logfile
+# Check osl740_2 user created (centos1)
+echo "Checking that osl740_2 user created (centos1): " | tee -a $logfile
 read -p "Enter your centos1 username: " centos1UserName
 read -p "Enter IP Address for your centos1 VMs eth0 device: " centos1_IPADDR
-check "ssh $centos1UserName@$centos1_IPADDR \"grep -isq \"ops245_2\" /etc/passwd\"" "This program did NOT detect the user \"ops245_2\" in the \"/etc/passwd\" file. Please create this user, complete this lab, and re-run this checking script." | tee -a $logfile
+check "ssh $centos1UserName@$centos1_IPADDR \"grep -isq \"osl740_2\" /etc/passwd\"" "This program did NOT detect the user \"osl740_2\" in the \"/etc/passwd\" file. Please create this user, complete this lab, and re-run this checking script." | tee -a $logfile
 
-# Check ops245_1 user removed (centos1)
-#echo -n "Checking that ops245_1 user removed: "
-#check "! ssh $centos1UserName@$centos1_IPADDR grep -isq \"ops245_2\" /etc/passwd" "This program detected the user \"ops245_1\" in the \"/etc/passwd\" file, when that user should have been removed. Please remove this user, complete this lab, and re-run this checking script."
+# Check osl740_1 user removed (centos1)
+#echo -n "Checking that osl740_1 user removed: "
+#check "! ssh $centos1UserName@$centos1_IPADDR grep -isq \"osl740_1\" /etc/passwd" "This program detected the user \"osl740_1\" in the \"/etc/passwd\" file, when that user should have been removed. Please remove this user, complete this lab, and re-run this checking script."
 
 # Check foo created in /etc/skel directory (centos1)
 echo "Checking that \"/etc/skel\" directory contains the file called \"foo\" (centos1):" | tee -a $logfile
-check "ssh $centos1UserName@$centos1_IPADDR ls /etc/skel | grep -isq \"foo\"" "This program did NOT detect the file called \"foo\" in the \"/etc/skel\" directory. Please create this file, remove the user ops245_2, and then create that user to see the \"foo\" file automatically created in that user's home directory upon the creation of this user. Complete this lab, and re-run this checking script." | tee -a $logfile
+check "ssh $centos1UserName@$centos1_IPADDR ls /etc/skel | grep -isq \"foo\"" "This program did NOT detect the file called \"foo\" in the \"/etc/skel\" directory. Please create this file, remove the user osl740_2, and then create that user to see the \"foo\" file automatically created in that user's home directory upon the creation of this user. Complete this lab, and re-run this checking script." | tee -a $logfile
 
-# Check group name ops245 created with name "welcome" (centos1)
+# Check group name osl740 created with name "welcome" (centos1)
 echo "Checking that a group name \"welcome\" is contained in the file \"/etc/group\": " | tee -a $logfile
 check "ssh $centos1UserName@$centos1_IPADDR grep -isq \"welcome\" /etc/group" "This program did NOT detect the group name \"welcome\" in the \"/etc/group\" file. Please remove the group, and correctly add the group with the correct GID, complete the lab (with secondary users added), and re-run this checking script." | tee -a $logfile
 
