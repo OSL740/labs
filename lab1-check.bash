@@ -5,7 +5,7 @@
 # Author:  Murray Saul
 # Date:    May 22, 2016
 # Edited by: Peter Callaghan
-# Date: Sept 26, 2021
+# Date: Feb 11, 2022
 #
 # Purpose: Check that students correctly installed the centos1 VM
 #          and properly performed common Linux commands. Script will
@@ -44,7 +44,7 @@ then
 fi
 
 # System information gathering
-echo "OPS245 Lab 1 Check Script" > $logfile
+echo "OSL740 Lab 1 Check Script" > $logfile
 echo | tee -a $logfile
 echo "SYSTEM INFORMATION:" | tee -a $logfile
 #echo "------------------------------------" | tee -a $logfile
@@ -86,7 +86,7 @@ echo -n "Checking for network connectivity: " | tee -a $logfile
 check "wget -qO- http://google.ca &> /dev/null" "Your internet connection doesn't seem to work. Check /etc/sysconfig/network-scripts/ifcfg-ens33 to make sure ONBOOT is set to YES and being up the network interface using ifup." | tee -a $logfile
 
 # Check if SELinux is disabled
-echo -n "Checking that SELinux is disabled: " | tee -a $logfile
+echo -n "Checking that SELinux is set to permissive: " | tee -a $logfile
 check "grep -isq SELINUX=permissive /etc/selinux/config" "According to your \"/etc/selinux/config\" file, the variable SELINUX is not set to \"permissive\". Please make corrections and re-run this shell script." | tee -a $logfile
 
 # Check if /home/user/bin directory was created
