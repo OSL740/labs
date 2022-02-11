@@ -5,7 +5,7 @@
 # Author:  Murray Saul
 # Date:    June 7, 2016
 # Edited by: Peter Callaghan
-# Date: Sept 19, 2021
+# Date: Feb 11, 2022
 #
 # Purpose: Check that students correctly archived and installed and
 #          removed software on their VMs
@@ -49,8 +49,8 @@ In order to run this shell script, please
 have the following information ready:
 
  - IPADDRESSES for only your centos3 VM.
-   Remember that your password for your ops245 account
-   in centos3 is "ops245"!!!!
+   Remember that your password for your osl740 account
+   in centos3 is "osl740"!!!!
 
  - Your regular username password for c7host and ALL VMs.
    You were instructed to have the IDENTICAL usernames
@@ -73,12 +73,12 @@ clear
 
 
 # Start checking lab3
-echo "OPS245 Lab 3 Check Script" > $logfile
+echo "OSL740 Lab 3 Check Script" > $logfile
 echo | tee -a $logfile
 echo "CHECKING YOUR LAB 3 WORK:" | tee -a $logfile
 echo | tee -a $logfile
 
-centos3UserName="ops245"
+centos3UserName="osl740"
 
 
 
