@@ -6,7 +6,7 @@
 # Date:      May 22, 2016
 # Modified:  September 15, 2016
 # Edited by: Peter Callaghan
-# Date: 26 Sept, 2021
+# Date: 11 Feb, 2022
 #
 # Purpose: Check that students correctly installed centos1, centos2,
 #          and centos3 VMs. Check that VMs installed correctly
@@ -74,7 +74,7 @@ clear
 
 
 # Start checking lab2
-echo "OPS245 Lab 2 Check Script" > $logfile
+echo "OSL740 Lab 2 Check Script" > $logfile
 echo | tee -a $logfile
 echo "CHECKING YOUR LAB 2 WORK:" | tee -a $logfile
 echo | tee -a $logfile
