@@ -5,7 +5,7 @@
 # Author:  Murray Saul
 # Date:    November 18, 2016
 # Edited by: Peter Callaghan
-# Date: Sept 26, 2021
+# Date: March 2, 2022
 #
 # Purpose: 
 
@@ -64,7 +64,7 @@ then
 fi
 
 # System information gathering
-echo "OPS245 Lab 8 Check Script" > $logfile
+echo "OSL740 Lab 8 Check Script" > $logfile
 echo | tee -a $logfile
 echo "SYSTEM INFORMATION:" | tee -a $logfile
 #echo "------------------------------------" | tee -a $logfile
@@ -94,11 +94,11 @@ check "ssh root@centos3 \"(grep -iqs DHCPDISCOVER /var/log/messages &&  grep -iq
 
 # Check for non-empty "/var/lib/dhcpd/dhcpd.leases" file on centos3 VM
 echo "Checking for non-empty \"/var/lib/dhcpd/dhcpd.leases\" file on centos3 VM: " | tee -a $logfile
-check "ssh ops245@centos3 test -s /var/lib/dhcpd/dhcpd.leases " "This program did not detect the NON-EMPTY file called \"/var/lib/dhcpd/dhcpd.leases\" file in your centos3 VM. Please make corrections, and re-run this checking shell script." | tee -a $logfile
+check "ssh osl740@centos3 test -s /var/lib/dhcpd/dhcpd.leases " "This program did not detect the NON-EMPTY file called \"/var/lib/dhcpd/dhcpd.leases\" file in your centos3 VM. Please make corrections, and re-run this checking shell script." | tee -a $logfile
 
 # Check that centos3 can ping centos host (IPADDR: 192.168.245.42)
 echo "Checking that centos3 VM can ping centos1 host (IPADDR: \"192.168.245.42\"): " | tee -a $logfile
-check "ssh ops245@centos3 ping -c1 192.168.245.42 > /dev/null 2> /dev/null" "This program did not detect that there was an ip address set for any network interface card (i.e. eth0) for the value: \"192.168.245.42\". Please make corrections, and re-run this checking shell script." | tee -a $logfile
+check "ssh osl740@centos3 ping -c1 192.168.245.42 > /dev/null 2> /dev/null" "This program did not detect that there was an ip address set for any network interface card (i.e. eth0) for the value: \"192.168.245.42\". Please make corrections, and re-run this checking shell script." | tee -a $logfile
 
 # Check that "/var/lib/dhclient" directory is non-empty on centos1 VM
 echo  "Checking that \"/var/lib/dhclient\" directory is non-empty on centos1 VM: " | tee -a $logfile
