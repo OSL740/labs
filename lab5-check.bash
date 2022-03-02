@@ -5,7 +5,7 @@
 # Author:  Murray Saul
 # Date:    June 7, 2016
 # Edited by: Peter Callaghan
-# Date: Sept 26, 2021
+# Date: March 2, 2022
 #
 # Purpose: Check that students have correctly managed file system sizes with LVM
 #          and other disk management utlities. Also check that crontab was correctly
@@ -67,7 +67,7 @@ read null
 clear
 
 # System information gathering
-echo "OPS245 Lab 5 Check Script" > $logfile
+echo "OSL740 Lab 5 Check Script" > $logfile
 echo | tee -a $logfile
 echo "SYSTEM INFORMATION:" | tee -a $logfile
 #echo "------------------------------------" | tee -a $logfile
