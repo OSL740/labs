@@ -6,7 +6,7 @@
 # Date:    June 28, 2016
 # Modified: November 27, 2020 (Chris Johnson)
 # Edited by: Peter Callaghan
-# Date: Sept 26, 2021
+# Date: March 02, 2022
 #
 # Purpose: 
 
@@ -65,7 +65,7 @@ then
 fi
 
 # System information gathering
-echo "OPS245 Lab 7 Check Script" > $logfile
+echo "OSL740 Lab 7 Check Script" > $logfile
 echo | tee -a $logfile
 echo "SYSTEM INFORMATION:" | tee -a $logfile
 #echo "------------------------------------" | tee -a $logfile
@@ -103,7 +103,7 @@ check "ssh $centos1UserName@centos2 ls /home/$centos1UserName/.ssh/id_rsa.pub > 
 
 # Check that public key copied to the centos3 VM
 echo "Checking that public key copied to the \"centos3\" VM: " | tee -a $logfile
-check "ssh ops245@centos3 ls /home/ops245/.ssh/authorized_keys > /dev/null" "This program did not detect the public key \"/home/ops245/.ssh/authorized_keys\" in the centos3 VM. Please make corrections, and re-run this checking shell script." | tee -a $logfile
+check "ssh osl740@centos3 ls /home/osl740/.ssh/authorized_keys > /dev/null" "This program did not detect the public key \"/home/osl740/.ssh/authorized_keys\" in the centos3 VM. Please make corrections, and re-run this checking shell script." | tee -a $logfile
 
 # Have student run the command to remotely run gedit application
 cat <<+
