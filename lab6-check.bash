@@ -5,7 +5,7 @@
 # Author:  Murray Saul
 # Date:    June 27, 2016
 # Edited by: Peter Callaghan
-# Date: 18 Nov, 2021
+# Date: 02 Ma2, 2022
 # Edited by: Chris Johnson
 # Date: July 22, 2021
 #
@@ -68,7 +68,7 @@ then
 fi
 
 # System information gathering
-echo "OPS245 Lab 6 Check Script" > $logfile
+echo "OSL740 Lab 6 Check Script" > $logfile
 echo | tee -a $logfile
 echo "SYSTEM INFORMATION:" | tee -a $logfile
 #echo "------------------------------------" | tee -a $logfile
@@ -107,8 +107,8 @@ echo "Check for persistent setting on centos2: " | tee -a $logfile
 check "ssh ${centos1UserName}@centos2 grep -isq 192.168.245.12 '/etc/sysconfig/network-scripts/ifcfg-e*'" "This program could find a correct address in the netwrok interface file. Please make fixes, and re-run this checking shell script." | tee -a $logfile
 
 # Check for persistent setting on centos3
-echo "Check for persistent setting on centos3 (use password: \"ops245\"): " | tee -a $logfile
-check "ssh ops245@centos3 grep -isq 192.168.245.13 '/etc/sysconfig/network-scripts/ifcfg-e*'" "This program could not find a correct address in the network interface file. Please make fixes, and re-run this checking shell script." | tee -a $logfile
+echo "Check for persistent setting on centos3 (use password: \"osl740\"): " | tee -a $logfile
+check "ssh osl740@centos3 grep -isq 192.168.245.13 '/etc/sysconfig/network-scripts/ifcfg-e*'" "This program could not find a correct address in the network interface file. Please make fixes, and re-run this checking shell script." | tee -a $logfile
 
 # Check if can ping c7host name
 echo -n "Checking pinging c7host: " | tee -a $logfile
