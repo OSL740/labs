@@ -5,7 +5,7 @@
 # Author:  Murray Saul
 # Date:    June 7, 2016
 # Edited by: Peter Callaghan
-# Date: 11 Feb, 2022
+# Date: 06 Feb, 2023
 #
 # Purpose: Check that students correctly managed user and group accounts
 #          when performing this lab, check that students have properly
@@ -41,7 +41,7 @@ clear  # Clear the screen
 # Make certain user is logged in as root
 if [ $(whoami) != "root" ]
 then
-  echo "Note: You are required to run this program as root."
+  echo "Note: You are required to run this program with elevated privileges.  Use sudo."
   exit 1
 fi
 
