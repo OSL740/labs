@@ -5,7 +5,7 @@
 # Author:  Murray Saul
 # Date:    May 22, 2016
 # Edited by: Peter Callaghan
-# Date: Feb 11, 2022
+# Date: Feb 06, 2023
 #
 # Purpose: Check that students correctly installed the centos1 VM
 #          and properly performed common Linux commands. Script will
@@ -39,7 +39,7 @@ clear  # Clear the screen
 # Make certain user is logged in as root
 if [ $(whoami) != "root" ]
 then
-  echo "Note: You are required to run this program as root."
+  echo "Note: You are required to run this program with elevated privileges.  Use sudo."
   exit 1
 fi
 
