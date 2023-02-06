@@ -40,7 +40,7 @@ clear  # Clear the screen
 # Make certain user is logged in as root
 if [ $(whoami) != "root" ]
 then
-  echo "Note: You are required to run this program as root."
+  echo "Note: You are required to run this program with elevated privileges.  Use sudo."
   exit 1
 fi
 
