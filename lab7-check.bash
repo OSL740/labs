@@ -6,7 +6,7 @@
 # Date:    June 28, 2016
 # Modified: November 27, 2020 (Chris Johnson)
 # Edited by: Peter Callaghan
-# Date: March 02, 2022
+# Date: 06 Feb, 2023
 #
 # Purpose: 
 
@@ -60,7 +60,7 @@ clear
 # Make certain user is logged in as root
 if [ $(whoami) != "root" ]
 then
-  echo "Note: You are required to run this program as root."
+  echo "Note: You are required to run this program with elevated privileges.  Use sudo."
   exit 1
 fi
 
