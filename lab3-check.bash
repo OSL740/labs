@@ -72,9 +72,17 @@ clear
 
 
 
-# Start checking lab3
+# System information gathering
 echo "OSL740 Lab 3 Check Script" > $logfile
 echo | tee -a $logfile
+echo "SYSTEM INFORMATION:" | tee -a $logfile
+#echo "------------------------------------" | tee -a $logfile
+hostnamectl | tee -a $logfile
+echo -n "              Date: "  | tee -a $logfile
+date | tee -a $logfile
+echo | tee -a $logfile
+
+# Start checking lab8
 echo "CHECKING YOUR LAB 3 WORK:" | tee -a $logfile
 echo | tee -a $logfile
 
