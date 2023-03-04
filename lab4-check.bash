@@ -68,10 +68,17 @@ After reading the above steps, press ENTER to continue
 read null
 clear
 
-
-# Start checking lab4
+# System information gathering
 echo "OSL740 Lab 4 Check Script" > $logfile
 echo | tee -a $logfile
+echo "SYSTEM INFORMATION:" | tee -a $logfile
+#echo "------------------------------------" | tee -a $logfile
+hostnamectl | tee -a $logfile
+echo -n "              Date: "  | tee -a $logfile
+date | tee -a $logfile
+echo | tee -a $logfile
+
+# Start checking lab8
 echo "CHECKING YOUR LAB 4 WORK:" | tee -a $logfile
 echo | tee -a $logfile
 
