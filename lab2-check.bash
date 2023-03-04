@@ -73,9 +73,17 @@ read null
 clear
 
 
-# Start checking lab2
+# System information gathering
 echo "OSL740 Lab 2 Check Script" > $logfile
 echo | tee -a $logfile
+echo "SYSTEM INFORMATION:" | tee -a $logfile
+#echo "------------------------------------" | tee -a $logfile
+hostnamectl | tee -a $logfile
+echo -n "              Date: "  | tee -a $logfile
+date | tee -a $logfile
+echo | tee -a $logfile
+
+# Start checking lab2
 echo "CHECKING YOUR LAB 2 WORK:" | tee -a $logfile
 echo | tee -a $logfile
 
