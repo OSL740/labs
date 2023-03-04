@@ -78,7 +78,7 @@ echo -n "              Date: "  | tee -a $logfile
 date | tee -a $logfile
 echo | tee -a $logfile
 
-# Start checking lab8
+# Start checking lab3
 echo "CHECKING YOUR LAB 4 WORK:" | tee -a $logfile
 echo | tee -a $logfile
 
